@@ -111,7 +111,7 @@ export type ExperienceItem = {
 
 export const experience: ExperienceItem[] = [
   {
-    role: 'OneTech Services Summer Intern',
+    role: 'Software Engineering Intern',
     company: 'Legal & General',
     period: 'June 2026 – August 2026',
     highlights: [
@@ -136,7 +136,7 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    role: 'EngineeringProject Lead',
+    role: 'Engineering Project Lead',
     company: 'University Software Engineering Group Project',
     period: '',
     highlights: [
