@@ -7,6 +7,7 @@ import {
   profile, stats, skillGroups, projects, experience, education, aLevels,
   achievements, careerInterests, socials,
 } from '@/data/portfolioData';
+import profilePhoto from "/mypic.jpg";
 
 function getIcon(name: string) {
   const Icon = (LucideIcons as unknown as Record<string, LucideIcons.LucideIcon>)[name];
@@ -33,36 +34,81 @@ export default function StandardPortfolio() {
   return (
     <div className="bg-night-900">
       {/* About */}
-      <section id="about" className="mx-auto max-w-4xl px-6 py-20">
-        <motion.div {...fadeUp}>
-          <SectionHeading kicker="Neon Sign" title="About Me" />
-          <p className="mx-auto max-w-2xl text-center text-lg leading-relaxed text-cream-100">
-            {profile.summary}
-          </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-cream-200">
-            <span className="inline-flex items-center gap-1.5"><MapPin size={16} className="text-neon-cyan" /> {profile.location}</span>
-            <span className="inline-flex items-center gap-1.5"><Mail size={16} className="text-neon-cyan" /> {profile.email}</span>
-          </div>
-        </motion.div>
+      {/* About */}
+<section id="about" className="mx-auto max-w-5xl px-6 py-20">
+  <motion.div {...fadeUp}>
+    <SectionHeading kicker="Neon Sign" title="About Me" />
 
-        <motion.div {...fadeUp} className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-          {stats.map((s) => (
-            <div key={s.label} className="glass rounded-2xl p-5 text-center">
-              <p className="font-display text-2xl neon-text-cyan">{s.value}</p>
-              <p className="mt-1 text-xs text-cream-200">{s.label}</p>
-            </div>
-          ))}
-        </motion.div>
+    <div className="mt-10 grid items-center gap-10 md:grid-cols-[1.4fr_0.6fr]">
+      {/* Left: About information */}
+      <div className="text-center md:text-left">
+        <p className="text-lg leading-relaxed text-cream-100">
+          {profile.summary}
+        </p>
 
-        <motion.div {...fadeUp} className="mx-auto mt-8 max-w-2xl">
-          <h3 className="mb-3 text-center font-display text-lg text-cream-100">Career Interests</h3>
-          <div className="flex flex-wrap justify-center gap-2">
-            {careerInterests.map((c) => (
-              <span key={c} className="rounded-full border border-neon-purple/40 bg-ink-700 px-3 py-1 text-sm text-cream-100">{c}</span>
-            ))}
-          </div>
-        </motion.div>
-      </section>
+        <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-cream-200 md:justify-start">
+          <span className="inline-flex items-center gap-1.5">
+            <MapPin size={16} className="text-neon-cyan" />
+            {profile.location}
+          </span>
+
+          <span className="inline-flex items-center gap-1.5">
+            <Mail size={16} className="text-neon-cyan" />
+            {profile.email}
+          </span>
+        </div>
+      </div>
+
+      {/* Right: Profile photo */}
+      <div className="flex justify-center md:justify-end">
+        <div className="rounded-3xl bg-gradient-to-br from-neon-pink via-neon-purple to-neon-cyan p-[3px] shadow-[0_0_35px_rgba(236,72,153,0.35)]">
+          <img
+            src={profilePhoto}
+            alt="Ayushi Bose"
+            loading="lazy"
+            className="h-80 w-64 rounded-3xl object-cover object-center"
+          />
+        </div>
+      </div>
+    </div>
+  </motion.div>
+
+  <motion.div
+    {...fadeUp}
+    className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4"
+  >
+    {stats.map((s) => (
+      <div
+        key={s.label}
+        className="glass rounded-2xl p-5 text-center"
+      >
+        <p className="font-display text-2xl neon-text-cyan">
+          {s.value}
+        </p>
+        <p className="mt-1 text-xs text-cream-200">
+          {s.label}
+        </p>
+      </div>
+    ))}
+  </motion.div>
+
+  <motion.div {...fadeUp} className="mx-auto mt-8 max-w-2xl">
+    <h3 className="mb-3 text-center font-display text-lg text-cream-100">
+      Career Interests
+    </h3>
+
+    <div className="flex flex-wrap justify-center gap-2">
+      {careerInterests.map((c) => (
+        <span
+          key={c}
+          className="rounded-full border border-neon-purple/40 bg-ink-700 px-3 py-1 text-sm text-cream-100"
+        >
+          {c}
+        </span>
+      ))}
+    </div>
+  </motion.div>
+</section>
 
       {/* Skills */}
       <section id="skills" className="mx-auto max-w-5xl px-6 py-20">
