@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-night-900 text-cream-100 font-sans antialiased;
+  overflow-x: hidden;
+  background: linear-gradient(180deg, #05010f 0%, #0a0420 40%, #0e0830 100%);
+  background-attachment: fixed;
+}
+
+*:focus-visible {
+  outline: 2px solid theme('colors.neon.cyan');
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.glass {
+  background: rgba(10, 6, 18, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.glass-pink {
+  background: rgba(18, 10, 34, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 45, 149, 0.25);
+}
+
+.neon-text-pink {
+  color: #ff2d95;
+  text-shadow: 0 0 8px rgba(255, 45, 149, 0.7), 0 0 20px rgba(255, 45, 149, 0.4);
+}
+
+.neon-text-cyan {
+  color: #00f0ff;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.7), 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+.neon-text-purple {
+  color: #9d4edd;
+  text-shadow: 0 0 8px rgba(157, 78, 221, 0.7), 0 0 20px rgba(157, 78, 221, 0.4);
+}
+
+.neon-border-pink {
+  border: 1px solid rgba(255, 45, 149, 0.5);
+  box-shadow: 0 0 12px rgba(255, 45, 149, 0.3), inset 0 0 12px rgba(255, 45, 149, 0.1);
+}
+
+.neon-border-cyan {
+  border: 1px solid rgba(0, 240, 255, 0.5);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.3), inset 0 0 12px rgba(0, 240, 255, 0.1);
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #0a0612; }
+::-webkit-scrollbar-thumb { background: #9d4edd; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #ff2d95; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.4; }
+  94% { opacity: 1; }
+  96% { opacity: 0.7; }
+  97% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
