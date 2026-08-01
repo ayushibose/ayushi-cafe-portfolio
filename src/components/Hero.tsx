@@ -8,7 +8,7 @@ type Props = {
   onDownloadCV: () => void;
 };
 
-export default function Hero({ onExplore, onStandard, onDownloadCV }: Props) {
+export default function Hero({ onExplore, onStandard }: Props) {
   return (
     <section id="top" className="relative flex min-h-screen flex-col items-center justify-center px-6 text-center">
       {/* glow backdrop */}
@@ -51,12 +51,6 @@ export default function Hero({ onExplore, onStandard, onDownloadCV }: Props) {
             className="inline-flex items-center justify-center gap-2 rounded-full border border-neon-cyan/50 px-6 py-3 font-semibold text-neon-cyan transition hover:border-neon-cyan hover:shadow-glow-cyan"
           >
             <FileText size={18} /> View Portfolio
-          </button>
-          <button
-            onClick={onDownloadCV}
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-neon-green/50 px-6 py-3 font-semibold text-neon-green transition hover:border-neon-green hover:shadow-glow-cyan"
-          >
-            <Download size={18} /> Download CV
           </button>
         </div>
 

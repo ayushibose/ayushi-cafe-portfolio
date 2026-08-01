@@ -86,14 +86,6 @@ export default function App() {
     });
   };
 
-  const handleDownloadCV = () => {
-    const link = document.createElement('a');
-
-    link.href = profile.cvUrl;
-    link.download = '';
-    link.click();
-  };
-
   return (
     <div className="relative min-h-screen bg-night-900">
       {!sceneLoaded && <LoadingScreen />}
@@ -103,7 +95,6 @@ export default function App() {
       <Hero
         onExplore={scrollToScene}
         onStandard={scrollToStandard}
-        onDownloadCV={handleDownloadCV}
       />
 
       {/* Interactive 3D café */}
@@ -167,11 +158,6 @@ export default function App() {
               id: 'education' as const,
               label: 'Noticeboard',
               color: 'text-neon-blue',
-            },
-            {
-              id: 'cv' as const,
-              label: 'Receipt Printer',
-              color: 'text-neon-green',
             },
             {
               id: 'contact' as const,

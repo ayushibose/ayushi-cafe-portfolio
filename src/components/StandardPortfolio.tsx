@@ -231,20 +231,6 @@ export default function StandardPortfolio() {
         </motion.div>
       </section>
 
-      {/* CV download */}
-      <section className="mx-auto max-w-3xl px-6 py-16 text-center">
-        <motion.div {...fadeUp}>
-          <div className="glass rounded-3xl p-10">
-            <GraduationCap size={32} className="mx-auto text-neon-green" />
-            <h2 className="mt-4 font-display text-2xl neon-text-cyan">Want the full story?</h2>
-            <p className="mt-2 text-cream-200">Download a printable PDF of my complete CV.</p>
-            <a href={profile.cvUrl} download className="mt-5 inline-flex items-center gap-2 rounded-full bg-neon-green px-6 py-3 font-medium text-ink-900 transition hover:opacity-80">
-              <Download size={18} /> Download CV
-            </a>
-          </div>
-        </motion.div>
-      </section>
-
       {/* Contact */}
       <section id="contact" className="mx-auto max-w-3xl px-6 py-20 text-center">
         <motion.div {...fadeUp}>
