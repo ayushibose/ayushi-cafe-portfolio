@@ -11,13 +11,14 @@ export const profile = {
   email: 'ayushibose12@gmail.com',
   cvUrl: '/Ayushi-Bose-CV.pdf',
   summary:
-    "I'm a 3rd-year Computer Science student at the University of Southampton with experience across software engineering, data analysis, cloud technology and test automation.\n \n I enjoy building practical products that turn complex technical information into clear, useful experiences.\n\nDuring my Summer 2026 internship with Legal & General, I worked on a test-coverage dashboard designed to help quality engineers understand how much of their frontend codebase was covered by automated testing. Alongside technical development, I gained experience working in an engineering team through stand-ups, sprint reviews and stakeholder conversations.\n\nI'm particularly interested in roles that combine technology with analysis, product thinking and communication, including software engineering, data, business analysis and product or strategy-focused opportunities.",
+    "I'm a 3rd-year Computer Science student at the University of Southampton with experience across software engineering, data analysis, cloud technology, devops and product development.\n \n I enjoy working at the intersection of technology, product and business, strategising ideas into useful solutions.\n\nDuring my Summer 2026 internship with Legal & General, I worked on a test-coverage dashboard designed to help quality engineers understand how much of their frontend codebase was covered by automated testing. Alongside technical development, I gained experience working in an engineering team through stand-ups, sprint reviews and stakeholder conversations.\n\nI'm particularly interested in roles that combine technology with analysis, product thinking and communication, including software engineering, data, business analysis and product or strategy-focused opportunities.",
 };
 
 export const stats = [
   { label: 'University', value: 'Southampton' },
   { label: 'Course', value: 'Computer Science' },
   { label: 'Predicted Grade', value: '1st-Class' },
+  { label: 'Outside Tech', value: 'Marketing, Photography, Indian Classical & Bollywood Dance' },
 ];
 
 // --- Skills & technologies (Menu Board) -------------------
