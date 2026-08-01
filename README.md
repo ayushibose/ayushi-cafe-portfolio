@@ -1,2 +1,2 @@
 # ayushi-cafe-portfolio
-Newly created portfolio project to showcase latest experience and achievements
+Interactive 3D portfolio built with React, TypeScript and React Three Fiber.
