@@ -1,10 +1,21 @@
 import { motion } from 'framer-motion';
 import {
-  Zap, Briefcase, Code2, User, Trophy, FileText, Send, GraduationCap,
+  Coffee,
+  User,
+  Briefcase,
+  Code2,
+  Trophy,
+  GraduationCap,
+  FileText,
+  Send,
 } from 'lucide-react';
-import { interactiveObjects, type SectionId } from '@/data/portfolioData';
 
-const iconMap: Record<string, typeof Zap> = {
+import {
+  interactiveObjects,
+  type SectionId,
+} from '@/data/portfolioData';
+
+const iconMap = {
   about: User,
   projects: Briefcase,
   skills: Code2,
@@ -15,60 +26,73 @@ const iconMap: Record<string, typeof Zap> = {
   contact: Send,
 };
 
-const accentMap: Record<string, string> = {
-  about: 'text-neon-pink',
-  projects: 'text-neon-cyan',
-  skills: 'text-neon-cyan',
-  experience: 'text-neon-purple',
-  achievements: 'text-neon-pink',
-  education: 'text-neon-blue',
-  cv: 'text-neon-green',
-  contact: 'text-neon-magenta',
+type MobileCafeFallbackProps = {
+  onSelect: (id: SectionId) => void;
 };
 
 export default function MobileCafeFallback({
   onSelect,
-}: {
-  onSelect: (id: SectionId) => void;
-}) {
+}: MobileCafeFallbackProps) {
   return (
     <section
-      aria-label="Cyberpunk cafe illustration"
-      className="relative min-h-[80vh] w-full overflow-hidden"
+      aria-label="Alternative navigation for Ayushi's Cafe"
+      className="relative flex min-h-[100svh] w-full items-center overflow-hidden bg-ink-900 px-6 py-16"
     >
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/4 top-1/4 h-64 w-64 rounded-full bg-neon-pink/20 blur-3xl" />
-        <div className="absolute right-1/4 bottom-1/4 h-64 w-64 rounded-full bg-neon-cyan/20 blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-neon-cyan/20 blur-3xl" />
       </div>
 
-      <div className="relative z-10 mx-auto flex max-w-md flex-col items-center px-6 py-16 text-center">
+      <div className="relative z-10 mx-auto w-full max-w-md text-center">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Zap className="mx-auto text-neon-pink shadow-glow-pink" size={40} />
-          <h2 className="mt-4 font-display text-2xl neon-text-pink">Ayushi's Cafe</h2>
-          <p className="mt-2 text-sm text-neon-cyan">
-            The full 3D cyberpunk cafe is best on a larger screen. Tap an object below to explore each section.
+          <Coffee
+            size={40}
+            className="mx-auto text-neon-pink"
+          />
+
+          <h2 className="mt-4 font-display text-2xl neon-text-pink">
+            Ayushi&apos;s Cafe
+          </h2>
+
+          <p className="mt-3 text-sm leading-relaxed text-cream-200">
+            The 3D café could not load on this device. Select a section
+            below to explore the portfolio.
           </p>
         </motion.div>
 
-        <div className="mt-8 grid w-full grid-cols-2 gap-3">
-          {interactiveObjects.map((obj, i) => {
-            const Icon = iconMap[obj.id] ?? Zap;
+        <div className="mt-8 grid grid-cols-2 gap-3">
+          {interactiveObjects.map((object, index) => {
+            const Icon =
+              iconMap[object.id as keyof typeof iconMap] ?? Coffee;
+
             return (
               <motion.button
-                key={obj.id}
+                key={object.id}
+                type="button"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.05 * i }}
-                onClick={() => onSelect(obj.id)}
-                className="glass flex flex-col items-center gap-2 rounded-2xl px-4 py-5 text-cream-100 transition hover:border-neon-pink/50 hover:shadow-glow-pink"
+                transition={{ delay: index * 0.05 }}
+                onClick={() => onSelect(object.id)}
+                className="glass flex min-h-28 flex-col items-center justify-center gap-2 rounded-2xl px-4 py-4 text-cream-100 transition hover:border-neon-pink/50 hover:shadow-glow-pink focus:outline-none focus:ring-2 focus:ring-neon-cyan"
               >
-                <Icon size={22} className={accentMap[obj.id]} />
-                <span className="text-sm font-semibold">{obj.label}</span>
-                <span className="text-xs text-cream-200">{obj.hint}</span>
+                <Icon
+                  size={22}
+                  className="text-neon-cyan"
+                />
+
+                <span className="text-sm font-semibold">
+                  {object.label}
+                </span>
+
+                {object.hint && (
+                  <span className="text-xs text-cream-200">
+                    {object.hint}
+                  </span>
+                )}
               </motion.button>
             );
           })}
