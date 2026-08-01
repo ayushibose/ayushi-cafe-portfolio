@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Zap, ArrowDown, FileText, Download } from 'lucide-react';
+import { Coffee , ArrowDown, FileText, Download } from 'lucide-react';
 import { profile } from '@/data/portfolioData';
 
 type Props = {
@@ -29,10 +29,10 @@ export default function Hero({ onExplore, onStandard, onDownloadCV }: Props) {
           transition={{ delay: 0.2, type: 'spring' }}
           className="mb-6 rounded-full border border-neon-pink/40 bg-ink-800/60 p-4 shadow-glow-pink"
         >
-          <Zap size={40} className="text-neon-pink" strokeWidth={1.5} />
+          <Coffee  size={40} className="text-neon-pink" strokeWidth={1.5} />
         </motion.div>
 
-        <p className="mb-2 text-sm uppercase tracking-[0.3em] text-neon-cyan">Cyberpunk Portfolio</p>
+        <p className="mb-2 text-sm uppercase tracking-[0.3em] text-neon-cyan">Ayushi's Portfolio</p>
         <h1 className="font-display text-5xl leading-tight neon-text-pink sm:text-6xl md:text-7xl">
           {profile.name}
         </h1>
@@ -44,7 +44,7 @@ export default function Hero({ onExplore, onStandard, onDownloadCV }: Props) {
             onClick={onExplore}
             className="inline-flex items-center justify-center gap-2 rounded-full bg-neon-pink px-6 py-3 font-semibold text-ink-900 transition hover:shadow-glow-pink"
           >
-            <Zap size={18} /> Explore the Café
+            <Coffee  size={18} /> Explore the Café
           </button>
           <button
             onClick={onStandard}

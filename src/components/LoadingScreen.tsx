@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Zap } from 'lucide-react';
+import { LucideCoffee } from 'lucide-react';
 
 export default function LoadingScreen() {
   return (
@@ -15,11 +15,11 @@ export default function LoadingScreen() {
           transition={{ duration: 1.2, repeat: Infinity }}
           className="text-neon-pink shadow-glow-pink"
         >
-          <Zap size={48} strokeWidth={1.5} />
+          <LucideCoffee size={48} strokeWidth={1.5} />
         </motion.div>
         <div className="text-center">
           <h2 className="font-display text-2xl neon-text-pink">Ayushi's Cafe</h2>
-          <p className="mt-1 text-sm text-neon-cyan">Booting neon systems…</p>
+          <p className="mt-1 text-sm text-neon-cyan">Entering Ayushi's cafe...</p>
         </div>
         <div className="h-1 w-48 overflow-hidden rounded-full bg-ink-700">
           <motion.div

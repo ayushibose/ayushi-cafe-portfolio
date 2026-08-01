@@ -1,27 +1,23 @@
 // ============================================================
 //  AYUSHI'S CAFE — PORTFOLIO DATA
-//  Edit everything below. This is the single source of truth
-//  for all portfolio content shown in both the 3D café and
-//  the standard portfolio layout.
 // ============================================================
 
 export const profile = {
   name: 'Ayushi Bose',
   title: 'Computer Science Student | Software, Data & Product',
-  tagline: 'Building useful technology from code, data and user insight.',
-  heroLine: 'I build practical digital products using software, data and user insight.',
+  tagline: ' CS student passionate about leveraging data analytics and strategy with AI to solve real problems.',
+  heroLine: ' I love working on projects that combine analytics, communication and creative problem-solving.',
   location: 'United Kingdom',
-  email: 'ayushi.bose@example.com',
+  email: 'ayushibose12@gmail.com',
   cvUrl: '/Ayushi-Bose-CV.pdf',
   summary:
-    "I'm a Computer Science student at the University of Southampton with experience across software engineering, data analysis, cloud technology and test automation. I enjoy building practical products that turn complex technical information into clear, useful experiences.\n\nDuring my Summer 2026 internship with Legal & General, I worked on a test-coverage dashboard designed to help quality engineers understand how much of their frontend codebase was covered by automated testing. Alongside technical development, I gained experience working in an engineering team through stand-ups, sprint reviews and stakeholder conversations.\n\nI'm particularly interested in roles that combine technology with analysis, product thinking and communication, including software engineering, data, business analysis and product-focused opportunities.",
+    "I'm a 3rd-year Computer Science student at the University of Southampton with experience across software engineering, data analysis, cloud technology and test automation.\n \n I enjoy building practical products that turn complex technical information into clear, useful experiences.\n\nDuring my Summer 2026 internship with Legal & General, I worked on a test-coverage dashboard designed to help quality engineers understand how much of their frontend codebase was covered by automated testing. Alongside technical development, I gained experience working in an engineering team through stand-ups, sprint reviews and stakeholder conversations.\n\nI'm particularly interested in roles that combine technology with analysis, product thinking and communication, including software engineering, data, business analysis and product or strategy-focused opportunities.",
 };
 
 export const stats = [
   { label: 'University', value: 'Southampton' },
   { label: 'Course', value: 'Computer Science' },
-  { label: 'Year 1', value: '1st-Class' },
-  { label: 'Year 2 Avg', value: '73%' },
+  { label: 'Predicted Grade', value: '1st-Class' },
 ];
 
 // --- Skills & technologies (Menu Board) -------------------
@@ -53,9 +49,17 @@ export const skillGroups: SkillGroup[] = [
     items: ['AWS', 'EC2', 'S3', 'IAM', 'VPC', 'Docker', 'GitHub Actions', 'Kubernetes', 'Minikube', 'Linux'],
   },
   {
-    category: 'Testing & Development Tools',
+    category: 'Business Analysis & Product',
     icon: 'Wrench',
-    items: ['Playwright', 'Jest', 'Postman', 'Git', 'GitHub'],
+    items:  [
+    "Stakeholder Communication",
+    "Requirements Analysis",
+    "Jira",
+    "Agile Ways of Working",
+    "Problem Solving",
+    "Technical Documentation",
+    "Presenting Insights",
+  ],
   },
 ];
 
@@ -109,11 +113,10 @@ export const experience: ExperienceItem[] = [
     role: 'OneTech Services Summer Intern',
     company: 'Legal & General',
     period: 'June 2026 – August 2026',
-    location: 'Hove, United Kingdom',
     highlights: [
-      'Worked with another intern to develop a dashboard showing automated test coverage across frontend applications',
+      'Developed a dashboard showing automated test coverage across frontend applications',
       'Helped turn scattered coverage information into a clearer view for quality engineers maintaining the frontend platform',
-      'Worked with TypeScript and JavaScript alongside tools including Playwright, Jest and Postman',
+      'Worked with TypeScript and JavaScript to extract results from tools including Playwright, Jest and Postman',
       'Investigated coverage data, repository configurations and application mappings',
       'Participated in daily stand-ups, sprint reviews and conversations with engineering stakeholders',
       'Presented the completed internship project to colleagues and senior stakeholders',
@@ -132,11 +135,11 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    role: 'Project Lead',
+    role: 'EngineeringProject Lead',
     company: 'University Software Engineering Group Project',
     period: '',
     highlights: [
-      'Helped lead a year-long university software-engineering project',
+      'Led a year-long university software-engineering project',
       'Supported planning, requirements, task allocation and deadline management',
       'Coordinated progress across team members while also contributing technically',
       'Developed experience balancing technical decisions with team communication',
@@ -168,9 +171,8 @@ export const education: EducationItem[] = [
     course: 'Computer Science',
     period: '2024 – Present',
     details: [
-      'Achieved a First-Class average in Year 1',
-      'Achieved a 73% average in Year 2',
-      'Relevant study includes software engineering, data structures and algorithms, databases, computer systems, networks and security, embedded systems and formal verification',
+      'Year 1 modules:   Object-Oriented Programming in Java, Python Computing, Git, Linear Algebra, Probability, Calculus, Databases (SQL), Linux, Networks and Security, Data Structures and Algorithms, Computer Systems',
+      'Year 2 modules: Artificial Intelligence, Agile Software Engineering Group Project (1 year), Formal Specification and Verification, Programming Language Concepts, Theory of Computing, Computer Systems II, Haskell',
     ],
   },
 ];
@@ -191,27 +193,25 @@ export const achievements: Achievement[] = [
   { title: 'AWS Certified Cloud Practitioner', icon: 'Award' },
   { title: 'AWS re/Start graduate', icon: 'GraduationCap' },
   { title: 'CyberFirst Advanced, SQA Level 6', icon: 'ShieldCheck' },
-  { title: 'First-Class Year 1 university average', icon: 'Star' },
-  { title: '73% Year 2 university average', icon: 'Star' },
   { title: 'Led a university software-engineering group project', icon: 'Users' },
   { title: 'Marketing Representative for Southampton University Indian Society', icon: 'Megaphone' },
 ];
 
 // --- Career interests ---------------------------------------
 export const careerInterests = [
-  'Software engineering',
-  'Data and analytics',
-  'Artificial intelligence and machine learning',
   'Business analysis',
   'Product and technology strategy',
   'Roles combining technical problem-solving with stakeholder communication',
+  'Software engineering',
+  'Data and analytics',
+  'Artificial intelligence and machine learning',
 ];
 
 // --- Contact (Ordering terminal) -----------------------------
 export const socials = [
-  { label: 'GitHub', icon: 'Github', url: 'https://github.com/example' },
-  { label: 'LinkedIn', icon: 'Linkedin', url: 'https://linkedin.com/in/example' },
-  { label: 'Email', icon: 'Mail', url: 'mailto:ayushi.bose@example.com' },
+  { label: 'GitHub', icon: 'Github', url: 'https://github.com/ayushibose' },
+  { label: 'LinkedIn', icon: 'Linkedin', url: 'https://www.linkedin.com/in/ayushibose/' },
+  { label: 'Email', icon: 'Mail', url: 'mailto:ayushibose12@gmail.com' },
 ];
 
 // --- Navigation --------------------------------------------

@@ -223,7 +223,7 @@ export default function StandardPortfolio() {
 
       <footer className="border-t border-ink-700 py-8 text-center text-sm text-cream-200/60">
         <p>© {new Date().getFullYear()} {profile.name} · Ayushi's Cafe</p>
-        <p className="mt-1">Built with React, Three.js & neon dreams.</p>
+        <p className="mt-1">Designed and developed by Ayushi Bose · Built with React, Three.js & lots of espresso.</p>
       </footer>
     </div>
   );
